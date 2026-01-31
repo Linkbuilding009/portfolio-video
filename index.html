@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <title>Portfolio Video</title>
 
-  <!-- preload for instant play -->
+  <!-- Preload for faster start -->
   <link rel="preload" as="video" href="assets/hero.mp4" type="video/mp4">
 
   <style>
@@ -15,10 +15,11 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       width: 100%;
       height: 100%;
       overflow: hidden;
+      background: black;
     }
 
     .hero {
@@ -35,31 +36,14 @@
       height: 100%;
       object-fit: cover;
     }
-
-    .content {
-      position: relative;
-      z-index: 2;
-      color: white;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      font-family: Arial, sans-serif;
-      background: rgba(0,0,0,0.3);
-    }
   </style>
 </head>
 <body>
 
   <section class="hero">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline preload="auto">
       <source src="assets/hero.mp4" type="video/mp4">
     </video>
-
-    <div class="content">
-      Your Portfolio
-    </div>
   </section>
 
 </body>
